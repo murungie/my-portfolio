@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/screenshot.png" alt="Screenshot" width="800">
+  <img src="src/assets/screenshot.png" alt="Screenshot" width="800">
 </p>
 # React + Vite
 
