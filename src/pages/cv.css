@@ -1,0 +1,69 @@
+/* Base adjustments */
+.cv-container {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.cv-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.cv-text {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.cv-list {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #fff !important;
+  }
+
+  .cv-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  header {
+    border-bottom: 2px solid #000 !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.1rem !important;
+    margin-top: 0.5rem;
+  }
+
+  p,
+  li {
+    font-size: 0.85rem !important;
+    color: #000 !important;
+  }
+
+  /* Hide navigation, buttons, and other non-CV elements */
+  header nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Page break control */
+  section {
+    page-break-inside: avoid;
+  }
+}
