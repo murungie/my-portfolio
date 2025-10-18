@@ -23,7 +23,7 @@ export default function Header() {
         {/* Profile section */}
         <div className="flex items-center gap-3">
           <img
-            src="/assets/profile.png"
+            src="/assets/Logo.png"
             alt="Profile"
             className="w-10 h-10 rounded-full object-cover border-2 border-white"
           />

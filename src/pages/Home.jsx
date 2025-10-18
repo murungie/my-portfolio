@@ -30,7 +30,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative z-10 max-w-3xl mx-auto pt-20 px-2">
         <img
-          src="/assets/profile.png"
+          src="/assets/prof.png"
           alt="Profile"
           className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-lg mb-6 mx-auto"
         />
