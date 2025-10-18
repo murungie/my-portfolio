@@ -13,7 +13,7 @@ import {
   PenTool,
   User,
 } from "lucide-react";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -21,29 +21,30 @@ export default function Home() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative flex flex-col items-center text-center min-h-[100vh] px-6 
-                 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white"
+      className="relative flex flex-col items-center text-center min-h-screen px-4 md:px-8 
+                 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-x-hidden"
     >
       {/* Background image overlay */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1500&q=80')] bg-cover bg-center opacity-20"></div>
 
       {/* Hero Section */}
-      <div className="relative z-10 max-w-3xl mx-auto pt-20">
+      <div className="relative z-10 max-w-3xl mx-auto pt-20 px-2">
         <img
           src="/assets/profile.png"
           alt="Profile"
-          className="w-36 h-36 rounded-full object-cover border-4 border-white shadow-lg mb-6 mx-auto"
+          className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-white shadow-lg mb-6 mx-auto"
         />
-        <h1 className="text-4xl font-bold mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2 leading-snug">
           Hi, I'm <span className="text-yellow-300">Murungi Ezra</span>
         </h1>
-        <p className="text-lg opacity-90 mb-12 animate-pulse">
+        <p className="text-base md:text-lg opacity-90 mb-12 animate-pulse">
           Software Engineer • Professional IT Technologist • AI/ML Enthusiast
         </p>
       </div>
 
       {/* Section Previews */}
-      <div className="relative z-10 grid md:grid-cols-2 gap-8 max-w-5xl text-left">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-5xl text-left w-full px-2 md:px-4">
+        
         {/* About Preview */}
         <div className="bg-white text-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition">
           <User className="w-8 h-8 text-blue-600 mb-3" />
@@ -53,7 +54,7 @@ export default function Home() {
             digital solutions in healthcare, agriculture, and governance.
           </p>
           <Link
-            to="/About"
+            to="/about"
             className="inline-block mt-3 text-sm text-blue-600 font-medium hover:underline"
           >
             Learn More →
@@ -69,7 +70,7 @@ export default function Home() {
             cybersecurity, and system integration.
           </p>
           <Link
-            to="/Skills"
+            to="/skills"
             className="inline-block mt-3 text-sm text-purple-600 font-medium hover:underline"
           >
             Explore Skills →
@@ -85,7 +86,7 @@ export default function Home() {
             design practical tech solutions.
           </p>
           <Link
-            to="/Projects"
+            to="/projects"
             className="inline-block mt-3 text-sm text-green-600 font-medium hover:underline"
           >
             View Projects →
@@ -101,7 +102,7 @@ export default function Home() {
             experience in software solutions.
           </p>
           <Link
-            to="/Experience"
+            to="/experience"
             className="inline-block mt-3 text-sm text-pink-600 font-medium hover:underline"
           >
             My Journey →
@@ -109,7 +110,7 @@ export default function Home() {
         </div>
 
         {/* Blogs Preview */}
-        <div className="bg-white text-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition md:col-span-2">
+        <div className="bg-white text-gray-900 p-6 rounded-lg shadow hover:shadow-xl transition sm:col-span-2">
           <BookOpen className="w-8 h-8 text-yellow-600 mb-3" />
           <h3 className="font-semibold text-lg">Blogs</h3>
           <p className="text-sm text-gray-600">
@@ -117,7 +118,7 @@ export default function Home() {
             cybersecurity for businesses and communities.
           </p>
           <Link
-            to="/Blogs"
+            to="/blogs"
             className="inline-block mt-3 text-sm text-yellow-600 font-medium hover:underline"
           >
             Read Blogs →
@@ -126,8 +127,8 @@ export default function Home() {
       </div>
 
       {/* Acknowledgements */}
-      <section className="relative z-10 mt-20 max-w-5xl mx-auto px-6 text-center">
-        <h3 className="text-2xl font-bold text-yellow-300 mb-8">Acknowledgements</h3>
+      <section className="relative z-10 mt-20 max-w-5xl mx-auto px-4 text-center">
+        <h3 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-8">Acknowledgements</h3>
 
         <div className="flex flex-col items-center gap-6">
           {[
@@ -153,7 +154,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`${item.color} text-white px-6 py-4 rounded-full shadow-lg max-w-md`}
+              className={`${item.color} text-white px-6 py-4 rounded-full shadow-lg max-w-md w-full`}
             >
               <h4 className="font-semibold">{item.title}</h4>
               <p className="text-sm opacity-90">{item.text}</p>
@@ -163,31 +164,16 @@ export default function Home() {
       </section>
 
       {/* Contact + Social Links */}
-      <div className="relative z-10 mt-16 border-t border-white/40 pt-6 text-center">
-        <h3 className="text-lg font-semibold mb-3">Let's Connect</h3>
-        <div className="flex justify-center gap-6 text-white text-xl">
-          <a
-            href="https://x.com/muchuiezramuru2"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
+      <div className="relative z-10 mt-16 border-t border-white/30 pt-6 text-center w-full">
+        <h3 className="text-lg md:text-xl font-semibold mb-3">Let's Connect</h3>
+        <div className="flex justify-center gap-5 text-white text-xl">
+          <a href="https://x.com/muchuiezramuru2" target="_blank" rel="noreferrer" className="hover:text-yellow-300 transition">
             <Twitter />
           </a>
-          <a
-            href="https://www.linkedin.com/in/murungi-muchui-942850249"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
+          <a href="https://www.linkedin.com/in/murungi-muchui-942850249" target="_blank" rel="noreferrer" className="hover:text-yellow-300 transition">
             <Linkedin />
           </a>
-          <a
-            href="https://www.facebook.com/ezra.muchui.37/about"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
+          <a href="https://www.facebook.com/ezra.muchui.37/about" target="_blank" rel="noreferrer" className="hover:text-yellow-300 transition">
             <Facebook />
           </a>
           <a href="tel:+254712982405" className="hover:text-yellow-300 transition">
@@ -197,7 +183,7 @@ export default function Home() {
             href="https://wa.me/254712982405"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-green-400 transition"
+            className="hover:opacity-80 transition"
           >
             <img
               src="https://cdn-icons-png.flaticon.com/512/733/733585.png"

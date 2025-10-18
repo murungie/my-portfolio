@@ -16,35 +16,34 @@ export default function Header() {
   ];
 
   return (
-    <header className="relative shadow top-0 z-30">
-      {/* Background gradient + image overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20"></div>
-      </div>
-
-      <div className="relative max-w-6xl mx-auto px-6 py-4 flex items-center justify-between text-white">
-        {/* Profile + Title */}
-        <div className="flex items-center gap-4">
+    <header className="relative shadow-md top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      {/* Header Container */}
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3">
+        
+        {/* Profile section */}
+        <div className="flex items-center gap-3">
           <img
             src="/assets/profile.png"
             alt="Profile"
-            className="w-12 h-12 rounded-full object-cover border-2 border-white"
+            className="w-10 h-10 rounded-full object-cover border-2 border-white"
           />
           <div>
-            <h1 className="text-xl font-semibold">Murungi Ezra</h1>
-            <p className="text-sm opacity-80">Software Engineer</p>
+            <h1 className="text-base sm:text-lg font-semibold leading-tight">
+              Murungi Ezra
+            </h1>
+            <p className="text-xs sm:text-sm opacity-80">Software Engineer</p>
           </div>
         </div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation (Hidden on Mobile) */}
         <nav className="hidden md:block">
-          <ul className="flex gap-6 items-center">
+          <ul className="flex gap-6 items-center text-sm font-medium">
             {navItems.map((item) => (
               <li key={item.name}>
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `relative text-sm font-medium transition ${
+                    `transition ${
                       isActive ? "text-yellow-300" : "hover:text-yellow-200"
                     }`
                   }
@@ -56,27 +55,27 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Hamburger Button */}
         <button
-          className="md:hidden focus:outline-none z-50"
+          className="md:hidden p-2 focus:outline-none"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Menu */}
       {open && (
-        <nav className="md:hidden bg-green-700/90 backdrop-blur px-6 py-4 space-y-3">
-          <ul className="flex flex-col gap-3">
+        <nav className="md:hidden bg-purple-700/95 backdrop-blur-lg w-full px-4 py-4 space-y-4 shadow-lg">
+          <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
               <li key={item.name}>
                 <NavLink
                   to={item.path}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `block text-sm font-medium transition ${
-                      isActive ? "text-yellow-300" : "hover:text-yellow-200"
+                    `block text-base font-medium ${
+                      isActive ? "text-yellow-300" : "text-white hover:text-yellow-200"
                     }`
                   }
                 >
