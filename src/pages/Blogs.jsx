@@ -106,6 +106,42 @@ export default function Blogs() {
             ))}
           </div>
         </section>
+         {/* Acknowledgements */}
+      <section className="relative z-10 mt-20 max-w-5xl mx-auto px-4 text-center">
+        <h3 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-8">Acknowledgements</h3>
+
+        <div className="flex flex-col items-center gap-6">
+          {[
+            {
+              title: "Mentors",
+              text: "Special thanks to my mentors who guided me through AI, cybersecurity, and professional growth.",
+              color: "bg-blue-600",
+            },
+            {
+              title: "Institutions",
+              text: "Grateful to Murang’a County and universities for enabling impactful ICT projects.",
+              color: "bg-purple-600",
+            },
+            {
+              title: "Community",
+              text: "Inspired by innovators and peers striving to use technology for social good.",
+              color: "bg-pink-600",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className={`${item.color} text-white px-6 py-4 rounded-full shadow-lg max-w-md w-full`}
+            >
+              <h4 className="font-semibold">{item.title}</h4>
+              <p className="text-sm opacity-90">{item.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
       </div>
     </motion.main>
   );
