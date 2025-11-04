@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [showImage, setShowImage] = useState(false);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -20,12 +21,15 @@ export default function Header() {
       {/* Header Container */}
       <div className="flex items-center justify-between px-4 sm:px-6 py-3">
         
-        {/* Profile section */}
-        <div className="flex items-center gap-3">
+        {/* Profile Section */}
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => setShowImage(true)}
+        >
           <img
-            src="/assets/Logo.png"
+            src="/assets/image.png"
             alt="Profile"
-            className="w-10 h-10 rounded-full object-cover border-2 border-white"
+            className="w-10 h-10 rounded-full object-cover border-2 border-cyan-400 shadow-[0_0_15px_rgba(0,255,255,0.6)] hover:scale-110 transition-transform duration-300"
           />
           <div>
             <h1 className="text-base sm:text-lg font-semibold leading-tight">
@@ -35,7 +39,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Desktop Navigation (Hidden on Mobile) */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex gap-6 items-center text-sm font-medium">
             {navItems.map((item) => (
@@ -85,6 +89,28 @@ export default function Header() {
             ))}
           </ul>
         </nav>
+      )}
+
+      {/* Profile Image Modal */}
+      {showImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[100]"
+          onClick={() => setShowImage(false)}
+        >
+          <div className="relative">
+            <img
+              src="/assets/image.png"
+              alt="Profile Large"
+              className="max-w-[90vw] max-h-[90vh] rounded-full border-4 border-cyan-300 animate-[pulse-glow_3s_infinite]"
+            />
+            <button
+              onClick={() => setShowImage(false)}
+              className="absolute top-3 right-3 bg-white text-black font-bold rounded-full px-3 py-1 shadow hover:bg-gray-200 transition"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
       )}
     </header>
   );
