@@ -183,4 +183,13 @@ export default function ServicesPage() {
 
           <Link
             to="/contact"
-            className="inline-flex px-12 py-4 bg-white text-indigo-600 rounded-full font-semibold shadow-l
+            className="inline-flex px-12 py-4 bg-white text-indigo-600 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
+          >
+            Start a Project →
+          </Link>
+        </motion.div>
+      </section>
+
+    </main>
+  );
+}

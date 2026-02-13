@@ -192,4 +192,29 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/murungi-muchui-942850249" target="_blank" rel="noreferrer" className="hover:text-yellow-300 transition">
             <Linkedin />
           </a>
-  
+          <a href="https://www.facebook.com/ezra.muchui.37/about" target="_blank" rel="noreferrer" className="hover:text-yellow-300 transition">
+            <Facebook />
+          </a>
+          <a href="tel:+254712982405" className="hover:text-yellow-300 transition">
+            <Phone />
+          </a>
+          <a
+            href="https://wa.me/254712982405"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:opacity-80 transition"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+              alt="WhatsApp"
+              className="w-6 h-6 inline-block"
+            />
+          </a>
+        </div>
+        <p className="mt-3 text-sm text-white/80">
+          Phone / WhatsApp: +254 712 982405
+        </p>
+      </div>
+    </motion.main>
+  );
+}
