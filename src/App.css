@@ -1,0 +1,21 @@
+/* Make root container fluid for all screen sizes */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Add smooth scrolling */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.card {
+  padding: 1.5em;
+}
+
+.read-the-docs {
+  color: #888;
+}
