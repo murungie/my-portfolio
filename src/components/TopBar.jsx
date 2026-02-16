@@ -1,73 +1,84 @@
 import React from "react";
-import { Twitter, Linkedin, Facebook, Phone, Mail, Github } from "lucide-react";
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Phone,
+  Mail,
+  Github,
+} from "lucide-react";
 
 export default function TopBar() {
   return (
-    <div className="w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white text-xs sm:text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+    <div className="w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white text-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-        {/* Left: Contact */}
-        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 text-center sm:text-left">
+        {/* Wrapper */}
+        <div className="flex flex-col md:flex-row items-center justify-between py-2 gap-3">
 
-          {/* Phone */}
-          <a
-            href="tel:+254712982405"
-            className="flex items-center gap-1 hover:text-yellow-300 transition whitespace-nowrap"
-          >
-            <Phone size={14} />
-            <span className="hidden xs:inline">+254 712 982 405</span>
-          </a>
+          {/* Contact Section */}
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 text-center sm:text-left">
 
-          {/* Email */}
-          <a
-            href="mailto:muchuiezramurungi@gmail.com"
-            className="flex items-center gap-1 hover:text-yellow-300 transition"
-          >
-            <Mail size={14} />
-            {/* Hide full email on very small screens */}
-            <span className="hidden sm:inline break-all">
-              muchuiezramurungi@gmail.com
-            </span>
-          </a>
-        </div>
+            {/* Phone */}
+            <a
+              href="tel:+254712982405"
+              className="flex items-center gap-2 hover:text-yellow-300 transition"
+            >
+              <Phone size={15} />
+              <span className="break-all">+254 712 982 405</span>
+            </a>
 
-        {/* Right: Social Icons */}
-        <div className="flex items-center gap-4">
-          <a
-            href="https://x.com/muchuiezramuru2"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
-            <Twitter size={16} />
-          </a>
+            {/* Email */}
+            <a
+              href="mailto:muchuiezramurungi@gmail.com"
+              className="flex items-center gap-2 hover:text-yellow-300 transition"
+            >
+              <Mail size={15} />
+              <span className="break-all">
+                muchuiezramurungi@gmail.com
+              </span>
+            </a>
+          </div>
 
-          <a
-            href="https://www.linkedin.com/in/murungi-muchui-942850249"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
-            <Linkedin size={16} />
-          </a>
+          {/* Social Icons */}
+          <div className="flex items-center gap-5 text-lg">
+            <a
+              href="https://x.com/muchuiezramuru2"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300 transition"
+            >
+              <Twitter size={18} />
+            </a>
 
-          <a
-            href="https://www.facebook.com/ezra.muchui.37/about"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
-            <Facebook size={16} />
-          </a>
+            <a
+              href="https://www.linkedin.com/in/murungi-muchui-942850249"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300 transition"
+            >
+              <Linkedin size={18} />
+            </a>
 
-          <a
-            href="https://github.com/murungie"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-yellow-300 transition"
-          >
-            <Github size={16} />
-          </a>
+            <a
+              href="https://www.facebook.com/ezra.muchui.37/about"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300 transition"
+            >
+              <Facebook size={18} />
+            </a>
+
+            <a
+              href="https://github.com/murungie"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-yellow-300 transition"
+            >
+              <Github size={18} />
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
