@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Topbar from "./components/TopBar";
@@ -19,23 +25,28 @@ function Layout() {
   const location = useLocation();
 
   return (
-    <>
-      <Topbar /> 
+    <div className="flex flex-col min-h-screen">
+      <Topbar />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />}/>
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cv" element={<CVPage />} />
-      </Routes>
-      {/* Show footer on all pages except Home */}
+
+      {/* Main Content Area */}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cv" element={<CVPage />} />
+        </Routes>
+      </main>
+
+      {/* Footer (optional logic kept) */}
       {location.pathname !== "/" && <Footer />}
-    </>
+    </div>
   );
 }
 
