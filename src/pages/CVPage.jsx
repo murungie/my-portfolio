@@ -113,7 +113,7 @@ export default function CVPage() {
         {/* Download Button */}
         <div className="text-center">
           <a
-            href="/documents/cv.pdf"
+            href=""
             download
             className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
           >
