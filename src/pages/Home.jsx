@@ -29,7 +29,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-20 text-center">
         <motion.img
-          src="/assets/Prof.png"
+          src="/assets/prof.png"
           alt="Profile"
           className="w-32 h-32 rounded-full border-4 border-white shadow-xl mx-auto mb-8"
           initial={{ scale: 0.8 }}
