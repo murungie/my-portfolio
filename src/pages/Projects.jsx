@@ -39,21 +39,21 @@ const featuredProjects = [
 /* ---------------- TESTIMONIALS ---------------- */
 const testimonials = [
   {
-    name: "Daniel Mwangi",
+    name: "Daniel Mark",
     role: "Startup Founder",
     message:
       "Built our AI system from architecture to deployment. Highly strategic and technically strong.",
     avatar: "https://i.pravatar.cc/150?img=12",
   },
   {
-    name: "Sarah Wanjiru",
+    name: "Sarah Chloe",
     role: "E-commerce Director",
     message:
       "Improved our SEO and digital presence massively. Traffic and conversions increased significantly.",
     avatar: "https://i.pravatar.cc/150?img=32",
   },
   {
-    name: "James Otieno",
+    name: "Marion Tenns",
     role: "Tech Lead",
     message:
       "Strong engineering mindset. Clean scalable systems and excellent communication.",
