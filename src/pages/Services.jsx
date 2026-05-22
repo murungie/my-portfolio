@@ -13,8 +13,6 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
-import Hero from "../components/Hero";
-
 /* ---------- SERVICE CATEGORIES ---------- */
 const categories = [
   {
