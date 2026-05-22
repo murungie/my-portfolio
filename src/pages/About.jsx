@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Star, Rocket, Briefcase, BookOpen, Heart } from "lucide-react";
-
+import Hero from "../components/Hero";
 export default function About() {
   return (
     <motion.main
