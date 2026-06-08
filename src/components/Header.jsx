@@ -35,7 +35,7 @@ export default function Header() {
           />
           <div className="truncate">
             <h1 className="font-semibold text-blue-900 text-sm sm:text-base truncate">
-              Murungi Ezra
+              MM Company
             </h1>
             <p className="text-[10px] sm:text-xs text-gray-500">
               Software Engineer
