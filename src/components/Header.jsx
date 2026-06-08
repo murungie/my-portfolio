@@ -38,7 +38,7 @@ export default function Header() {
               MM Company
             </h1>
             <p className="text-[10px] sm:text-xs text-gray-500">
-              Software Engineer
+              Software Engineers
             </p>
           </div>
         </div>
