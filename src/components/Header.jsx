@@ -35,10 +35,10 @@ export default function Header() {
           />
           <div className="truncate">
             <h1 className="font-semibold text-blue-900 text-sm sm:text-base truncate">
-              MM Company
+              Murungi Muchui
             </h1>
             <p className="text-[10px] sm:text-xs text-gray-500">
-              Software Engineers
+              Software Engineer
             </p>
           </div>
         </div>
