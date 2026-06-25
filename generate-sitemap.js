@@ -2,7 +2,7 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 import { createWriteStream } from 'fs';
 import { resolve } from 'path';
 
-const siteUrl = 'https://your-domain.vercel.app';
+const siteUrl = 'https://murungimuchui.co.ke';
 
 async function generateSitemap() {
   const sitemap = new SitemapStream({ hostname: siteUrl });
