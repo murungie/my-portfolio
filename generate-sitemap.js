@@ -10,9 +10,9 @@ async function generateSitemap() {
   sitemap.write({ url: '/', changefreq: 'monthly', priority: 1.0 });
   sitemap.write({ url: '/about', changefreq: 'monthly', priority: 0.8 });
   sitemap.write({ url: '/projects', changefreq: 'monthly', priority: 0.8 });
-  sitemap.write({ url: '/services', priority: 0.8 });
-  sitemap.write({ url: '/skills', priority: 0.7 });
-  sitemap.write({ url: '/contact', priority: 0.8 });
+  sitemap.write({ url: '/services', changefreq: 'monthly', priority: 0.8 });
+  sitemap.write({ url: '/skills', changefreq: 'monthly', priority: 0.8 });
+  sitemap.write({ url: '/contact', changefreq: 'monthly', priority: 0.8 });
   sitemap.end();
 
   const data = await streamToPromise(sitemap);
@@ -20,7 +20,7 @@ async function generateSitemap() {
   const writeStream = createWriteStream(path);
   writeStream.write(data.toString());
   writeStream.end();
-  console.log('✅ Sitemap generated at public/sitemap.xml');
+  console.log('Sitemap generated at public/sitemap.xml');
 }
 
 generateSitemap();
