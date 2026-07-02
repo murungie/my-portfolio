@@ -15,177 +15,207 @@ import {
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 /* ---------- SERVICE CATEGORIES ---------- */
+
 const categories = [
   {
-    title: "Engineering & Architecture",
+    title: "Web Design & Digital Presence",
     description:
-      "Scalable systems designed for performance, intelligence, and resilience.",
+      "Professional websites designed to help businesses attract customers, build trust, and grow online.",
+
+    services: [
+      {
+        icon: Network,
+        title: "Website Design & Development",
+        desc: "Modern, responsive and SEO-ready websites tailored to your business goals.",
+
+        includes: [
+          "Business Websites",
+          "Company Profile Websites",
+          "E-Commerce Stores",
+          "Landing Pages",
+          "School & College Websites",
+          "Hotel & Booking Websites",
+          "Church & NGO Websites",
+          "Portfolio Websites",
+          "Blogs & News Websites",
+          "Website Maintenance",
+        ],
+
+        pricing: "KSh 8,000 – 150,000+",
+      },
+    ],
+  },
+
+  {
+    title: "Business Systems & Software Development",
+    description:
+      "Custom software solutions that automate operations, improve efficiency and support business growth.",
+
+    services: [
+      {
+        icon: Database,
+        title: "Business Management Systems",
+        desc: "Tailor-made systems built around your workflow and business requirements.",
+
+        includes: [
+          "ERP Systems",
+          "POS Systems",
+          "Inventory Management",
+          "HR & Payroll Systems",
+          "CRM Systems",
+          "Hospital Management Systems",
+          "School Management Systems",
+          "SACCO & Cooperative Systems",
+          "Booking & Reservation Systems",
+          "Custom Business Software",
+        ],
+
+        pricing: "KSh 40,000 – 500,000+",
+      },
+    ],
+  },
+
+  {
+    title: "Mobile Apps, AI & Automation",
+    description:
+      "Smart applications and automation solutions that improve customer experience and business productivity.",
 
     services: [
       {
         icon: Brain,
-        title: "AI-Integrated Platforms",
-        desc: "LLM integrations and intelligent automation systems.",
+        title: "AI & Mobile Solutions",
+        desc: "Intelligent digital products built for today's businesses.",
 
         includes: [
-          "ChatGPT/OpenAI integrations",
-          "AI workflow automation",
-          "AI customer support systems",
-          "Document processing AI",
-          "Custom AI dashboards",
+          "Android Applications",
+          "AI Chatbots",
+          "ChatGPT Integration",
+          "WhatsApp Automation",
+          "Business Process Automation",
+          "Document Processing AI",
+          "Customer Support Bots",
+          "Analytics Dashboards",
+          "Workflow Automation",
+          "Custom AI Solutions",
         ],
 
-        pricing: "Starting from $1,500",
-      },
-
-      {
-        icon: Network,
-        title: "Distributed Architecture",
-        desc: "Scalable backend ecosystems engineered for reliability.",
-
-        includes: [
-          "Microservices architecture",
-          "REST & GraphQL APIs",
-          "Backend system design",
-          "Event-driven systems",
-          "Scalability optimization",
-        ],
-
-        pricing: "Starting from $2,000",
-      },
-
-      {
-        icon: Cloud,
-        title: "Cloud-Native Infrastructure",
-        desc: "Modern deployment pipelines and cloud environments.",
-
-        includes: [
-          "Docker containerization",
-          "CI/CD pipelines",
-          "AWS/GCP deployments",
-          "Server configuration",
-          "Production infrastructure",
-        ],
-
-        pricing: "Starting from $1,200",
-      },
-
-      {
-        icon: Database,
-        title: "Scalable Data Systems",
-        desc: "High-performance databases and optimized storage systems.",
-
-        includes: [
-          "PostgreSQL/MySQL setup",
-          "Database optimization",
-          "Redis caching",
-          "Data architecture",
-          "Backup & recovery systems",
-        ],
-
-        pricing: "Starting from $900",
-      },
-
-      {
-        icon: Shield,
-        title: "Security & Observability",
-        desc: "Monitoring, logging, and infrastructure protection systems.",
-
-        includes: [
-          "System monitoring",
-          "Application logging",
-          "Security hardening",
-          "API protection",
-          "Performance monitoring",
-        ],
-
-        pricing: "Starting from $800",
+        pricing: "KSh 30,000 – 300,000+",
       },
     ],
   },
 
   {
-    title: "Product Engineering",
-
+    title: "SEO & Digital Marketing",
     description:
-      "Building complete, maintainable digital products ready for real-world scale.",
-
-    services: [
-      {
-        icon: Cpu,
-        title: "SaaS Product Engineering",
-
-        desc: "Complete SaaS platforms from architecture to deployment.",
-
-        includes: [
-          "Multi-tenant SaaS systems",
-          "Authentication systems",
-          "Admin dashboards",
-          "Billing integrations",
-          "Scalable backend architecture",
-        ],
-
-        pricing: "Starting from $3,500",
-      },
-    ],
-  },
-
-  {
-    title: "Growth & Brand Systems",
-
-    description:
-      "Scaling visibility, strengthening identity, and positioning products for market success.",
+      "Increase your online visibility and attract more customers through effective digital marketing strategies.",
 
     services: [
       {
         icon: TrendingUp,
-        title: "Digital Growth & SEO",
-
-        desc: "Optimization systems that improve visibility and conversions.",
+        title: "Digital Growth Services",
+        desc: "Marketing solutions focused on growing your online presence and generating quality leads.",
 
         includes: [
-          "Technical SEO",
-          "Analytics integration",
-          "Performance optimization",
-          "Keyword strategy",
-          "Conversion optimization",
+          "Search Engine Optimization (SEO)",
+          "Technical SEO Audit",
+          "Google Business Profile Optimization",
+          "Google Ads Management",
+          "Facebook & Instagram Advertising",
+          "Social Media Management",
+          "Email Marketing",
+          "Content Marketing",
+          "Website Analytics",
+          "Conversion Optimization",
         ],
 
-        pricing: "Starting from $600",
+        pricing: "KSh 10,000 – 80,000/month",
       },
+    ],
+  },
 
+  {
+    title: "Computer Sales & IT Services",
+    description:
+      "Reliable IT products and support services for individuals, schools and businesses.",
+
+    services: [
+      {
+        icon: Cpu,
+        title: "Computers & Technical Support",
+        desc: "Sales, upgrades and maintenance for all your computing needs.",
+
+        includes: [
+          "Laptop Sales",
+          "Desktop Computer Sales",
+          "Computer Accessories",
+          "Printers & Scanners",
+          "Networking Equipment",
+          "Laptop & Desktop Repairs",
+          "Windows Installation",
+          "Software Installation",
+          "Network Setup",
+          "Data Backup & Recovery",
+        ],
+
+        pricing: "KSh 2,000 – 250,000+",
+      },
+    ],
+  },
+
+  {
+    title: "Online Digital Services",
+    description:
+      "Convenient online application and digital document services completed through official government and institutional portals.",
+
+    services: [
+      {
+        icon: Cloud,
+        title: "Online Application Assistance",
+        desc: "Professional assistance with online submissions and digital documentation.",
+
+        includes: [
+          "KRA PIN Registration & Returns",
+          "Business Name Registration",
+          "eCitizen Applications",
+          "Passport Application Assistance",
+          "Good Conduct Applications",
+          "Driving Licence Renewal",
+          "HELB & KUCCPS Applications",
+          "CV & Cover Letter Preparation",
+          "Online Job Applications",
+          "General Online Form Submission",
+        ],
+
+        pricing: "KSh 300 – 5,000",
+      },
+    ],
+  },
+
+  {
+    title: "Brand Identity & Product Launch",
+    description:
+      "Build a memorable brand and launch your products with confidence using professional branding services.",
+
+    services: [
       {
         icon: Palette,
-        title: "Brand & Identity Systems",
-
-        desc: "Visual identity systems aligned with business strategy.",
-
-        includes: [
-          "Logo design",
-          "Brand guidelines",
-          "UI design systems",
-          "Typography & colors",
-          "Visual consistency setup",
-        ],
-
-        pricing: "Starting from $700",
-      },
-
-      {
-        icon: Megaphone,
-        title: "Product Launch Strategy",
-
-        desc: "Go-to-market systems and launch planning.",
+        title: "Branding & Marketing Materials",
+        desc: "Creative branding solutions that make your business stand out.",
 
         includes: [
-          "Launch funnels",
-          "Marketing strategy",
-          "Product positioning",
-          "Growth experimentation",
-          "Audience targeting",
+          "Logo Design",
+          "Brand Identity",
+          "Business Cards",
+          "Company Profiles",
+          "Flyers & Brochures",
+          "Social Media Posters",
+          "Presentation Design",
+          "Product Launch Campaigns",
+          "Marketing Materials",
+          "Visual Brand Guidelines",
         ],
 
-        pricing: "Starting from $1,000",
+        pricing: "KSh 5,000 – 80,000+",
       },
     ],
   },
