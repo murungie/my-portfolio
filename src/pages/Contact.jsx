@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
   const [status, setStatus] = useState("");
+  const formRef = useRef(null);
+  useEffect(() => {
+  formRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +48,10 @@ export default function Contact() {
       </div>
 
       {/* Feedback Form */}
-      <div className="max-w-3xl mx-auto px-6 py-12">
+      <div
+  ref={formRef}
+  className="max-w-3xl mx-auto px-6 py-12"
+>
         <form
           onSubmit={handleSubmit}
           className="bg-white p-6 rounded-lg shadow space-y-4"
